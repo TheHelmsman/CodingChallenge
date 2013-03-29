@@ -36,13 +36,13 @@ package uk.co.dubit.whackamole
 		{
 			event.target.removeEventListener(event.type, arguments.callee);
 			
-			loadMainGame();
+			loadMainGame(event.difficulty);
 		}
 		
-		public function loadMainGame():void
+		public function loadMainGame(gameDifficultyLevel:int):void
 		{
 			var moleGameView:MoleGameView = new MoleGameView();
-			moleGameView.moleGame = new MoleGame();
+			moleGameView.moleGame = new MoleGame(gameDifficultyLevel);
 			moleGameView.moleGame.addEventListener(MoleGameEvent.GAME_OVER, handleGameOverEvent);
 			
 			loadView(moleGameView);
@@ -50,6 +50,8 @@ package uk.co.dubit.whackamole
 		
 		private function handleGameOverEvent(e:MoleGameEvent):void 
 		{
+			e.target.removeEventListener(e.type, arguments.callee);
+			
 			//Game over view here
 			var gameOverView:GameOverView = new GameOverView();
 			gameOverView.addEventListener(ReplayGameEvent.REPLAY_GAME, handleReplayGameEvent);
@@ -60,6 +62,8 @@ package uk.co.dubit.whackamole
 		
 		private function handleReplayGameEvent(e:ReplayGameEvent):void 
 		{
+			e.target.removeEventListener(e.type, arguments.callee);
+			
 			//Change looping funciton here
 			loadIntroduction();
 		}

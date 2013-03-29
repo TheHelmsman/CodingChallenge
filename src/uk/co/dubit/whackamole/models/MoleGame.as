@@ -25,14 +25,17 @@ package uk.co.dubit.whackamole.models
 		
 		private var gameTimer:Timer;
 		
-		private const GAME_TIMER_DELAY:int = 400;
-		private const TOTAL_MOLES:int = 5;
+		private var _difficulty:int;
 		
-		public function MoleGame()
+		private const GAME_TIMER_DELAY:Array = [450, 400, 375];
+		private const TOTAL_MOLES:int = 30;
+		
+		public function MoleGame(difficulty:int)
 		{
+			_difficulty = difficulty;
 			//Set up the game timer; when it fires a new
 			//mole is added
-			gameTimer = new Timer(GAME_TIMER_DELAY, TOTAL_MOLES);
+			gameTimer = new Timer(GAME_TIMER_DELAY[difficulty], TOTAL_MOLES);
 			gameTimer.addEventListener(TimerEvent.TIMER, onGameTimer);
 			gameTimer.addEventListener(TimerEvent.TIMER_COMPLETE, onGameTimerComplete);
 		}
@@ -58,6 +61,11 @@ package uk.co.dubit.whackamole.models
 		{
 			_moleHoles = value;
 		}
+		
+		public function get difficulty():int 
+		{
+			return _difficulty;
+		}
 
 		public function start() : void
 		{
@@ -77,7 +85,7 @@ package uk.co.dubit.whackamole.models
 		
 		public function addScore(points:int) : void
 		{
-			score += points;
+			score += points;//Modifier here?
 		}
 			
 		private function getFreeMoleHole() : MoleHole

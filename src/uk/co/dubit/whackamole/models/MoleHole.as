@@ -60,9 +60,20 @@ package uk.co.dubit.whackamole.models
 			//and set up the timer to remove it after
 			//its showtime has elapsed
 			this.mole = mole;
-
+			
 			showTimer.reset();
-			showTimer.delay = mole.showtime;
+			switch(_moleGame.difficulty)
+			{
+				case 0:
+					//Easy
+				case 1:
+					//Normal
+					showTimer.delay = mole.showtime;
+					break;
+				case 2:
+					//Hard
+					showTimer.delay = mole.showtime * .9;//90% of the original time.
+			}
 			showTimer.start();
 		}
 		

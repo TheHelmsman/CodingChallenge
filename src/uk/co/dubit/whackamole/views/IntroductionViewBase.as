@@ -1,5 +1,6 @@
 package uk.co.dubit.whackamole.views
 {
+	import flash.events.StageVideoAvailabilityEvent;
 	import spark.components.Button;
 	import spark.components.Group;
 	
@@ -8,11 +9,28 @@ package uk.co.dubit.whackamole.views
 	[Event(name="introductionStart", type="uk.co.dubit.whackamole.views.events.IntroductionViewEvent")]
 	public class IntroductionViewBase extends Group
 	{
-		public var startButton:Button;
+		public var easyButton:Button;
+		public var mediumButton:Button;
+		public var hardButton:Button;
 		
-		protected function onStartButtonClick() : void
+		protected function easyModeSelected():void
 		{
-			dispatchEvent(new IntroductionViewEvent(IntroductionViewEvent.START));
+			startGame(0);
+		}
+		
+		protected function normalModeSelected():void
+		{
+			startGame(1);
+		}
+		
+		protected function hardModeSelected():void
+		{
+			startGame(2);
+		}
+		
+		private function startGame(difficulty:int) : void
+		{
+			dispatchEvent(new IntroductionViewEvent(IntroductionViewEvent.START, difficulty));
 		}
 	}
 }

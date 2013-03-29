@@ -32,9 +32,9 @@ Modify the Introduction screen to allow the user to choose one of three difficul
 
 
 *Your comments:*
+At first thought I would want to add additional mole holes to whack at, that would increase game difficulty. However that was not listed as a requirement and there are additional edits such a change would make. Scaling bitmaps is not adviseable. Also Would not necessarily increase difficulty as it would just require increased precission as the ame area does not scale up.
 
-
-
+I also would rather the difficulty selection screen be seperated from the introduction screen. But the task is to add it to the introduction screen.
 
 
 3. Add new types of mole

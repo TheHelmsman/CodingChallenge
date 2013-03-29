@@ -36,11 +36,38 @@
 					 verticalCenter="0"
 					 width="60%"
 					 textAlign="center" />
-			<s:Button id="startButton"
-					  click="onStartButtonClick()"
-					  label="Start!"
-					  horizontalCenter="0"
-					  bottom="10" />
+			<s:BorderContainer styleName="roundedBorder"
+							   minHeight="0"
+							   minWidth="0"
+							   width="50%"
+							   height="20%" 
+							   bottom="1" 
+							   horizontalCenter="1">
+				<s:Label text="Select a difficulty." 
+						 horizontalCenter = "1"
+						 width="60%"
+						 textAlign="center" 
+						 top="1"/>
+				<s:HGroup width="100%"
+						  height="30"
+						  paddingBottom="3"
+						  paddingLeft="3"
+						  paddingRight="3"
+						  paddingTop="3" horizontalAlign="center" bottom="1">
+					<s:Button id="easyButton"
+							  click="easyModeSelected()"
+							  label="Easy"
+							  horizontalCenter="1"/>
+					<s:Button id="mediumButton"
+							  click="normalModeSelected()"
+							  label="Medium"
+							  horizontalCenter="1"/>
+					<s:Button id="hardButton"
+							  click="hardModeSelected()"
+							  label="Hard"
+							  horizontalCenter="1"/>
+				</s:HGroup>
+			</s:BorderContainer>
 		</s:BorderContainer>
 
 	</s:VGroup>
