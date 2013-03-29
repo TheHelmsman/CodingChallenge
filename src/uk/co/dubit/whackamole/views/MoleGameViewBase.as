@@ -29,6 +29,11 @@ package uk.co.dubit.whackamole.views
 			moleHoles = value.moleHoles;
 		}
 		
+		public function get moleGame():MoleGame
+		{
+			return _moleGame;
+		}
+		
 		protected function onCreationComplete(event:FlexEvent) : void
 		{
 			startAnimation.play();

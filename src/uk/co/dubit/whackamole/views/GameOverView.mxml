@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<views:IntroductionViewBase xmlns:fx="http://ns.adobe.com/mxml/2009"
-							xmlns:s="library://ns.adobe.com/flex/spark"
-							xmlns:mx="library://ns.adobe.com/flex/mx"
-							xmlns:views="uk.co.dubit.whackamole.views.*"
-							styleName="stretchToContainer">
+<views:GameOverViewBase xmlns:fx="http://ns.adobe.com/mxml/2009"
+						xmlns:s="library://ns.adobe.com/flex/spark"
+						xmlns:mx="library://ns.adobe.com/flex/halo"
+						xmlns:views="uk.co.dubit.whackamole.views.*"
+						styleName="stretchToContainer">
+
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
@@ -21,7 +22,7 @@
 						   width="100%"
 						   height="40">
 			<s:Label styleName="titleLabel"
-					 text="Welcome to Whack-A-Mole"
+					 text="Game Over!"
 					 horizontalCenter="0"
 					 verticalCenter="0" />
 		</s:BorderContainer>
@@ -31,18 +32,18 @@
 						   minWidth="0"
 						   width="100%"
 						   height="100%">
-			<s:Label text="You know the drill - click the moles as soon as they appear, gain points. Hit as many as you can within the time limit. Good luck!"
+			<s:Label text="Score: { score }"
 					 horizontalCenter="0"
 					 verticalCenter="0"
 					 width="60%"
 					 textAlign="center" />
-			<s:Button id="startButton"
-					  click="onStartButtonClick()"
-					  label="Start!"
+			<s:Button id="replayButton"
+					  click="onReplayButtonClick()"
+					  label="Play Again"
 					  horizontalCenter="0"
 					  bottom="10" />
 		</s:BorderContainer>
 
 	</s:VGroup>
 
-</views:IntroductionViewBase>
+</views:GameOverViewBase>

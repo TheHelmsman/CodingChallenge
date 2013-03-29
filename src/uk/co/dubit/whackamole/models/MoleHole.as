@@ -14,7 +14,7 @@ package uk.co.dubit.whackamole.models
 	public class MoleHole
 	{
 		private var _mole:Mole;
-		private var _moleGame:MoleGame;
+		private var _moleGame:MoleGame;//This seems to be a silly scope loop thing.
 		
 		private var showTimer:Timer;
 		

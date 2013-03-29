@@ -19,7 +19,7 @@ It should also include a button labelled 'Play again' that will start a new game
 
 
 *Your comments:*
-
+Play again should loop back to difficulty selection screen. IMO.
 
 
 

@@ -26,7 +26,7 @@ package uk.co.dubit.whackamole.models
 		private var gameTimer:Timer;
 		
 		private const GAME_TIMER_DELAY:int = 400;
-		private const TOTAL_MOLES:int = 60;
+		private const TOTAL_MOLES:int = 5;
 		
 		public function MoleGame()
 		{
