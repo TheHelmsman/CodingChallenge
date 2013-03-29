@@ -30,7 +30,7 @@ package uk.co.dubit.whackamole.models
 		private var _difficulty:int;
 		
 		private const GAME_TIMER_DELAY:Array = [450, 400, 375];
-		private const TOTAL_MOLES:int = 30;
+		private const TOTAL_MOLES:int = 40;
 		
 		public function MoleGame(difficulty:int)
 		{
