@@ -3,6 +3,8 @@ package uk.co.dubit.whackamole.models
 	import flash.events.EventDispatcher;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
+	import uk.co.dubit.whackamole.models.moles.FireMole;
+	import uk.co.dubit.whackamole.models.moles.Zombole;
 	
 	import mx.collections.ArrayCollection;
 	
@@ -106,7 +108,23 @@ package uk.co.dubit.whackamole.models
 		{
 			//Every time the timer fires, add a new mole
 			var moleHole:MoleHole = getFreeMoleHole();
-			moleHole.populate(new Mole());
+			//Do some math to make super moles spawn
+			var moleToSpawn:Number = Math.random();
+			if (moleToSpawn <= 0.6)
+			{
+				//Normal
+				moleHole.populate(new Mole());
+			}
+			else if (moleToSpawn <= 0.85)
+			{
+				//Fire Mole
+				moleHole.populate(new FireMole());
+			}
+			else
+			{
+				//Zombie Mole (default!)
+				moleHole.populate(new Zombole());
+			}
 		}
 		
 		private function onGameTimerComplete(event:TimerEvent) : void

@@ -59,7 +59,7 @@ When spawning a new mole, have a 60% chance of creating a standard mole, a 25% c
 
 
 *Your comments:*
-
+Creates supermole archtypes to add base functionality to Mole for the fire and zombie mole sub types
 
 
 

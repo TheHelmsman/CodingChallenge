@@ -16,7 +16,15 @@
 					   buttonMode="true"
 					   mouseChildren="false">
 		<s:BitmapImage source="@Embed('/../assets/standard_mole.png')"
-					   visible="{ moleHole.mole != null }"
+					   visible="{ moleHole.mole != null &amp;&amp; moleHole.mole.moleType == 0}"
+					   horizontalCenter="0"
+					   verticalCenter="0" />
+		<s:BitmapImage source="@Embed('/../assets/fire_mole.png')"
+					   visible="{ moleHole.mole != null &amp;&amp; moleHole.mole.moleType == 1}"
+					   horizontalCenter="0"
+					   verticalCenter="0" />
+		<s:BitmapImage source="@Embed('/../assets/zombie_mole.png')"
+					   visible="{ moleHole.mole != null &amp;&amp; moleHole.mole.moleType == 2}"
 					   horizontalCenter="0"
 					   verticalCenter="0" />
 		<s:BitmapImage source="@Embed('/../assets/skull_and_crossbones.png')"
