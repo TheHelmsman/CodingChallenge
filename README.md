@@ -93,7 +93,9 @@ Criteria required: Miss more than 30 moles during a game
 
 
 *Your comments:*
+Corrected the "Master Achievement. I believe it was instended to be killing a total number of moles, not zombie moles. Also corrected the value for better initial balance
 
+35 Moles down from 40. Any mole instead of Zombie Moles
 
 
 

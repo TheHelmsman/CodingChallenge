@@ -1,8 +1,9 @@
-package uk.co.dubit.whackamole.views 
+package uk.co.dubit.whackamole.views
 {
 	import spark.components.Button;
 	import spark.components.Group;
 	import uk.co.dubit.whackamole.views.events.ReplayGameEvent;
+	
 	/**
 	 * ...
 	 * @author Jeffrey T Feenstra
@@ -13,9 +14,9 @@ package uk.co.dubit.whackamole.views
 		
 		private var _score:int = 0;
 		
-		public function GameOverViewBase() 
+		public function GameOverViewBase()
 		{
-			
+		
 		}
 		
 		public function onReplayButtonClick():void
@@ -25,16 +26,16 @@ package uk.co.dubit.whackamole.views
 		}
 		
 		[Bindable]
-		public function get score():int 
+		public function get score():int
 		{
 			return _score;
 		}
 		
-		public function set score(value:int):void 
+		public function set score(value:int):void
 		{
 			_score = value;
 		}
-		
+	
 	}
 
 }

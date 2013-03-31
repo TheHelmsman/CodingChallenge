@@ -7,9 +7,9 @@ package uk.co.dubit.whackamole
 	import uk.co.dubit.whackamole.models.MoleGame;
 	import uk.co.dubit.whackamole.views.events.IntroductionViewEvent;
 	import uk.co.dubit.whackamole.views.events.ReplayGameEvent;
+	import uk.co.dubit.whackamole.views.GameOverView;
 	import uk.co.dubit.whackamole.views.IntroductionView;
 	import uk.co.dubit.whackamole.views.MoleGameView;
-	import uk.co.dubit.whackamole.views.GameOverView;
 	
 	/**
 	 * A small whack-a-mole game based around MVC principles
@@ -48,7 +48,7 @@ package uk.co.dubit.whackamole
 			loadView(moleGameView);
 		}
 		
-		private function handleGameOverEvent(e:MoleGameEvent):void 
+		private function handleGameOverEvent(e:MoleGameEvent):void
 		{
 			e.target.removeEventListener(e.type, arguments.callee);
 			
@@ -60,7 +60,7 @@ package uk.co.dubit.whackamole
 			loadView(gameOverView);
 		}
 		
-		private function handleReplayGameEvent(e:ReplayGameEvent):void 
+		private function handleReplayGameEvent(e:ReplayGameEvent):void
 		{
 			e.target.removeEventListener(e.type, arguments.callee);
 			

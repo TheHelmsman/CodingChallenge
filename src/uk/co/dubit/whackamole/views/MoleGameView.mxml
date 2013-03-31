@@ -118,6 +118,18 @@
 								   minWidth="0"
 								   width="100%"
 								   height="100%">
+								   
+					<s:DataGroup id="achievementGroup"
+							 dataProvider="{ _moleGame.achievements.achievementRenderInfo }"
+							 itemRenderer="uk.co.dubit.whackamole.views.AchievementRenderer"
+							 verticalCenter="0"
+							 horizontalCenter="0">
+							 <s:layout>
+								<s:TileLayout requestedColumnCount="1"
+											  horizontalGap="10"
+											  verticalGap="10" />
+							</s:layout>
+					</s:DataGroup>
 
 				</s:BorderContainer>
 

@@ -8,16 +8,16 @@ package uk.co.dubit.whackamole.models.events
 		
 		private var _score:int;
 		
-		public function MoleGameEvent(type:String, score:int, bubbles:Boolean=false, cancelable:Boolean=false)
+		public function MoleGameEvent(type:String, score:int, bubbles:Boolean = false, cancelable:Boolean = false)
 		{
 			_score = score;
 			super(type, bubbles, cancelable);
 		}
-
+		
 		public function get score():int
 		{
 			return _score;
 		}
-
+	
 	}
 }

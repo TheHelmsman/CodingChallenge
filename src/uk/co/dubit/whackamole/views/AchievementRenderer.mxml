@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views:AchievementRendererBase xmlns:fx="http://ns.adobe.com/mxml/2009" 
+               xmlns:s="library://ns.adobe.com/flex/spark" 
+               xmlns:mx="library://ns.adobe.com/flex/halo"
+			   xmlns:views="uk.co.dubit.whackamole.views.*">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:BorderContainer styleName="roundedBorder"
+					   minHeight="0"
+					   minWidth="0"
+					   width="160">
+			<s:Label text = "{achievementRule.title} - {achievementRule.details}" explicitMaxWidth="160" fontSize="12" color="red" visible="{achievementRule.count &gt; 0}" />
+			<s:Label text = "{achievementRule.title} - {achievementRule.details}" explicitMaxWidth="160" fontSize="12" color="green" visible="{achievementRule.count &lt;= 0}" />
+	</s:BorderContainer>
+	
+</views:AchievementRendererBase>
