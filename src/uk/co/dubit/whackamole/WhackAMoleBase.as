@@ -1,16 +1,19 @@
 package uk.co.dubit.whackamole
 {
 	import mx.events.FlexEvent;
+
 	import spark.components.Application;
 	import spark.components.Group;
-	import uk.co.dubit.whackamole.models.events.MoleGameEvent;
+
 	import uk.co.dubit.whackamole.models.MoleGame;
+    import uk.co.dubit.whackamole.views.IntroductionView;
+    import uk.co.dubit.whackamole.views.MoleGameView;
 	import uk.co.dubit.whackamole.views.events.IntroductionViewEvent;
+
 	import uk.co.dubit.whackamole.views.events.ReplayGameEvent;
 	import uk.co.dubit.whackamole.views.GameOverView;
-	import uk.co.dubit.whackamole.views.IntroductionView;
-	import uk.co.dubit.whackamole.views.MoleGameView;
-	
+    import uk.co.dubit.whackamole.models.events.MoleGameEvent;
+
 	/**
 	 * A small whack-a-mole game based around MVC principles
 	 */
